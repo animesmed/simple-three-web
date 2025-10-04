@@ -91,6 +91,43 @@ const Presentation = () => {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="container mx-auto px-6 py-20">
+        <div className="max-w-5xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Meet Our <span className="text-gradient">Team</span>
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            The talented individuals driving our mission forward
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+          {[
+            { name: "Alex Rivera", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex" },
+            { name: "Sarah Chen", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" },
+            { name: "Marcus Johnson", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus" },
+            { name: "Emma Wilson", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma" },
+            { name: "David Park", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=David" },
+            { name: "Olivia Martinez", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Olivia" },
+          ].map((member, index) => (
+            <div key={index} className="flex flex-col items-center group">
+              <div className="relative mb-3">
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-110">
+                  <img 
+                    src={member.avatar} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+              <p className="text-sm font-medium text-center">{member.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Challenge Description */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto bg-card/50 backdrop-blur border border-border rounded-2xl p-12 card-glow">
