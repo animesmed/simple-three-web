@@ -1,14 +1,30 @@
+import space1 from "@/assets/imgs/slideimgs/slide01.jpg";
+import space2 from "@/assets/imgs/slideimgs/slide02.jpg";
+import space3 from "@/assets/imgs/slideimgs/slide03.jpg";
+import space4 from "@/assets/imgs/slideimgs/slide04.jpg";
+import space5 from "@/assets/imgs/slideimgs/slide05.jpg";
+import space6 from "@/assets/imgs/slideimgs/slide06.jpg";
+import space7 from "@/assets/imgs/slideimgs/slide07.jpg";
+
 import annie from "@/assets/imgs/AnnieMelissa.jpeg.jpg";
 import bryan from "@/assets/imgs/BryanQuispe.jpg";
 import stip from "@/assets/imgs/StipSarmiento.jpg";
 import amilcar from "@/assets/imgs/AmilcarEstacio.jpg";
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Zap, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-space.jpg";
 
+const images = [space1, space2, space3, space4, space5, space6, space7];
+
 const Presentation = () => {
+  const [current, setCurrent] = useState(0);
+
+  const prevSlide = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+  const nextSlide = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -55,6 +71,37 @@ const Presentation = () => {
         </div>
       </section>
 
+      {/* Gallery Slider */}
+      <section className="container mx-auto px-6 py-12">
+        <div className="max-w-5xl mx-auto text-center mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Our Project <span className="text-gradient">"Building Humanity’s Next Home"</span>
+          </h2>
+        </div>
+        <div className="relative max-w-5xl mx-auto">
+          <img
+            src={images[current]}
+            alt={`Slide ${current + 1}`}
+            className="w-full h-auto max-h-96 md:max-h-[32rem] lg:max-h-[40rem] object-contain rounded-xl shadow-lg bg-background/5"
+          />
+
+          <button
+            onClick={prevSlide}
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-primary/50 text-white p-2 rounded-full hover:bg-primary transition"
+            aria-label="Previous slide"
+          >
+            ‹
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-primary/50 text-white p-2 rounded-full hover:bg-primary transition"
+            aria-label="Next slide"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+
       {/* Project Overview */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-5xl mx-auto">
@@ -96,6 +143,8 @@ const Presentation = () => {
           </div>
         </div>
       </section>
+
+      
 
       {/* Team Section */}
       <section className="container mx-auto px-6 py-20">
@@ -176,13 +225,13 @@ const Presentation = () => {
       </a>
 
       <a href="https://www.autodesk.com/products/autocad" target="_blank" rel="noopener noreferrer">
-        <img
-          src="https://img.icons8.com/ios-filled/100/ffffff/autodesk-autocad.png"
-          alt="AutoCAD"
-          className="w-20 h-20 mx-auto transition-transform hover:scale-110"
-        />
-        <p className="mt-3 text-sm font-medium text-muted-foreground">AutoCAD</p>
-      </a>
+      <img
+        src="https://img.icons8.com/ios-filled/100/ffffff/autodesk-autocad.png"
+        alt="AutoCAD"
+        className="w-20 h-20 mx-auto transition-transform hover:scale-110"
+      />
+      <p className="mt-3 text-sm font-medium text-muted-foreground">AutoCAD</p>
+    </a>
 
        <a href="https://unity.com/" target="_blank" rel="noopener noreferrer">
         <img
