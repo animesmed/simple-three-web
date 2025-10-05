@@ -1,3 +1,4 @@
+import logo from "@/assets/imgs/IgnitionForce_logo.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -17,9 +18,13 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3 group">
             <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-              <Rocket className="w-6 h-6 text-primary" />
+              <img
+                src={logo}
+                alt="Ignition Force Logo"
+                className="w-12 h-12 object-contain"
+              />
             </div>
-            <span className="text-xl font-bold text-gradient">NASA Hackathon</span>
+            <span className="text-xl font-bold text-gradient">Ignition Force</span>
           </Link>
 
           <div className="flex gap-8">
