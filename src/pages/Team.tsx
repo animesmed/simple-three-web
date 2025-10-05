@@ -1,43 +1,36 @@
+import annie from "@/assets/imgs/AnnieMelissa.jpeg.jpg";
+import bryan from "@/assets/imgs/BryanQuispe.jpg";
+import stip from "@/assets/imgs/StipSarmiento.jpg";
+import amilcar from "@/assets/imgs/AmilcarEstacio.jpg";
+
 import { Card } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Team = () => {
   const teamMembers = [
     {
-      name: "Alex Rivera",
-      role: "Team Lead & Full Stack Developer",
-      description: "Passionate about space tech and building innovative solutions for complex problems.",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
-    },
-    {
-      name: "Sarah Chen",
-      role: "Data Scientist & AI Specialist",
-      description: "Expert in machine learning models and data analysis for space mission optimization.",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
-    },
-    {
-      name: "Marcus Johnson",
+      name: "Annie Estacio",
       role: "UI/UX Designer",
-      description: "Creating beautiful and intuitive interfaces that make complex data accessible.",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus",
+      description: "Designing intuitive and immersive interfaces that bring the space habitat experience to life.",
+      avatar: annie,
     },
     {
-      name: "Emma Wilson",
-      role: "Aerospace Engineer",
-      description: "Bringing real-world aerospace knowledge to ensure technical accuracy and feasibility.",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma",
+      name: "Bryan Quispe",
+      role: "Team Lead & Frontend Developer",
+      description: "Leading the mission with a focus on AI, data analysis, and human-centered technology for space innovation.",
+      avatar: bryan,
     },
     {
-      name: "David Park",
-      role: "Backend Developer",
-      description: "Building robust APIs and data pipelines for real-time simulation processing.",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
+      name: "Stip Sarmiento",
+      role: "Software Architec",
+      description: "Architecting scalable systems that merge performance, reliability, and advanced visualization for space design.",
+      avatar: stip,
     },
     {
-      name: "Olivia Martinez",
-      role: "DevOps Engineer",
-      description: "Ensuring smooth deployment and scalability of our hackathon solutions.",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Olivia",
+      name: "Amilca Estacio",
+      role: "Full Stack Developer",
+      description: "Integrating real-world aerospace knowledge with robust development to ensure technical precision and feasibility.",
+      avatar: amilcar,
     },
   ];
 
@@ -61,7 +54,7 @@ const Team = () => {
 
       {/* Team Grid */}
       <section className="container mx-auto px-6 py-12 pb-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <Card 
               key={index} 
@@ -109,7 +102,7 @@ const Team = () => {
         <div className="max-w-5xl mx-auto bg-card/50 backdrop-blur border border-border rounded-2xl p-12 card-glow">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-gradient mb-2">6</div>
+              <div className="text-4xl font-bold text-gradient mb-2">4</div>
               <div className="text-muted-foreground">Team Members</div>
             </div>
             <div className="text-center">
