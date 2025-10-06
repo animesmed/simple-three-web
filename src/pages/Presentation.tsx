@@ -1,10 +1,10 @@
-import space1 from "@/assets/imgs/slideimgs/slide01.jpg";
-import space2 from "@/assets/imgs/slideimgs/slide02.jpg";
-import space3 from "@/assets/imgs/slideimgs/slide03.jpg";
-import space4 from "@/assets/imgs/slideimgs/slide04.jpg";
-import space5 from "@/assets/imgs/slideimgs/slide05.jpg";
-import space6 from "@/assets/imgs/slideimgs/slide06.jpg";
-import space7 from "@/assets/imgs/slideimgs/slide07.jpg";
+import space1 from "@/assets/imgs/slideimgs/1.png";
+import space2 from "@/assets/imgs/slideimgs/2.png";
+import space3 from "@/assets/imgs/slideimgs/3.png";
+import space4 from "@/assets/imgs/slideimgs/4.png";
+import space5 from "@/assets/imgs/slideimgs/5.png";
+import space6 from "@/assets/imgs/slideimgs/6.png";
+import space7 from "@/assets/imgs/slideimgs/7.png";
 
 import annie from "@/assets/imgs/AnnieMelissa.jpeg.jpg";
 import bryan from "@/assets/imgs/BryanQuispe.jpg";
