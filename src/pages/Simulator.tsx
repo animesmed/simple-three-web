@@ -23,11 +23,11 @@ const Simulator = () => {
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gradient mb-4">Mission Simulator</h1>
           <p className="text-sm italic text-muted-foreground mb-6">
-          Prototype preview — camera navigation only (work in progress)
+            Prototype preview — camera navigation only (work in progress)
           </p>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Experience a prototype of our interactive space habitat simulator built with Unity.
-            Control the environment, observe system dynamics, and test the balance of survival beyond Earth.
+            Experience an early prototype of our interactive space habitat simulator built with Unity.
+            Explore the environment, test camera navigation, and visualize our concept for off-world living systems.
           </p>
         </div>
 
@@ -61,11 +61,11 @@ const Simulator = () => {
             <h3 className="text-lg font-semibold mb-2">Controls</h3>
             <div className="grid sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
               <div>
-                <p className="font-medium text-foreground">Teclas:</p>
+                <p className="font-medium text-foreground">Keyboard:</p>
                 <ul className="list-disc list-inside">
-                  <li><kbd>A</kbd>, <kbd>W</kbd>, <kbd>S</kbd>, <kbd>D</kbd> → Desplazamiento lineal</li>
-                  <li><kbd>Q</kbd> → Giro izquierda</li>
-                  <li><kbd>E</kbd> → Giro derecha</li>
+                  <li><kbd>A</kbd>, <kbd>W</kbd>, <kbd>S</kbd>, <kbd>D</kbd> → Linear movement</li>
+                  <li><kbd>Q</kbd> → Rotate left</li>
+                  <li><kbd>E</kbd> → Rotate right</li>
                   <li><kbd>R</kbd> → Zoom in</li>
                   <li><kbd>F</kbd> → Zoom out</li>
                 </ul>
@@ -73,9 +73,9 @@ const Simulator = () => {
               <div>
                 <p className="font-medium text-foreground">Mouse:</p>
                 <ul className="list-disc list-inside">
-                  <li>Click → Desplazamiento lineal</li>
-                  <li>Anticlick → Sostener para giro</li>
-                  <li>Rueda → Zoom in / out</li>
+                  <li>Left click → Linear movement</li>
+                  <li>Right click → Hold to rotate</li>
+                  <li>Scroll wheel → Zoom in / out</li>
                 </ul>
               </div>
             </div>
@@ -92,14 +92,15 @@ const Simulator = () => {
               ></iframe>
             ) : (
               <div className="text-muted-foreground text-center px-6">
-                <p className="text-lg">Press <span className="text-primary font-semibold">Run</span> to start the simulation 🚀</p>
+                <p className="text-lg">
+                  Press <span className="text-primary font-semibold">Run</span> to start the simulation 🚀
+                </p>
               </div>
             )}
             {isRunning && (
               <div className="absolute top-3 right-3 bg-background/70 backdrop-blur px-3 py-1 rounded-full text-xs text-muted-foreground">
-              Prototype — Visual Demo Only
+                Prototype — Visual Demo Only
               </div>
-
             )}
           </div>
         </Card>
@@ -107,10 +108,11 @@ const Simulator = () => {
         {/* Info Section */}
         <div className="max-w-4xl mx-auto mt-16 text-center text-muted-foreground leading-relaxed">
           <p>
-            This simulator is a <span className="text-primary font-medium">Unity WebGL</span> build, integrated into our
-            <span className="text-accent font-medium"> React </span> interface.  
-            It demonstrates a functional bridge between game engines and web-based visualization, 
-            allowing future modules to connect NASA datasets, user decisions, and AI-driven scenarios.
+            This simulator is a <span className="text-primary font-medium">Unity WebGL</span> build,
+            integrated into our <span className="text-accent font-medium">React</span> interface.
+            It showcases a functional bridge between game engines and web-based visualization,
+            paving the way for future modules that will integrate NASA datasets, user interaction,
+            and AI-driven decision systems.
           </p>
         </div>
       </section>
