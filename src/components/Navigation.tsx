@@ -1,4 +1,4 @@
-import logo from "@/assets/imgs/IgnitionForce_logo.jpg";
+import logo from "@/assets/imgs/Logo Hackaton.png";
 import { Link, useLocation } from "react-router-dom";
 import { Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -21,7 +21,7 @@ export const Navigation = () => {
               <img
                 src={logo}
                 alt="Ignition Force Logo"
-                className="w-12 h-12 object-contain"
+                className="w-14 h-14 object-contain"
               />
             </div>
             <span className="text-xl font-bold text-gradient">Ignition Force</span>
